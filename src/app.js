@@ -5,13 +5,13 @@ const mainImg = document.querySelector("#photo");
 
 prevBtn.addEventListener("click", function() {
     var temp = mainImg.src;
-    var result = temp.split("/")[4].split(".")[0];
+    var result = temp.split("/")[5].split(".")[0];
     changeImg(Number(result) - Number(1));
 });
 
 nextBtn.addEventListener("click", function() {
     var temp = mainImg.src;
-    var result = temp.split("/")[4].split(".")[0];
+    var result = temp.split("/")[5].split(".")[0];
     changeImg(Number(result) + Number(1));
 });
 
@@ -22,7 +22,7 @@ function changeImg(x) {
     } else if (x >= 55) {
         x = 1;
     }
-    mainImg.src = "/photos/" + x + ".jpg";
+    mainImg.src = "./photos/" + x + ".jpg";
     allDescriptions.forEach(function(e) {
         e.classList.remove("visible");
     });
