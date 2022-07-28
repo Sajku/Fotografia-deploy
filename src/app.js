@@ -22,7 +22,7 @@ function changeImg(x) {
     } else if (x >= 55) {
         x = 1;
     }
-    mainImg.src = "/gallery/photos/" + x + ".jpg";
+    mainImg.src = "/photos/" + x + ".jpg";
     allDescriptions.forEach(function(e) {
         e.classList.remove("visible");
     });
