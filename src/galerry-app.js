@@ -4,16 +4,14 @@ const allDescriptions = document.querySelectorAll(".description");
 const mainImg = document.querySelector("#photo");
 
 prevBtn.addEventListener("click", function() {
-    var temp = document.getElementById("photo").src;
-    console.log(document.getElementById("photo").src);
-    console.log(temp);
-    var result = temp.split("/")[5].split(".")[0];
+    var temp = mainImg.src;
+    var result = temp.split("/")[4].split(".")[0];
     changeImg(Number(result) - Number(1));
 });
 
 nextBtn.addEventListener("click", function() {
-    var temp = document.getElementById("photo").src;
-    var result = temp.split("/")[5].split(".")[0];
+    var temp = mainImg.src;
+    var result = temp.split("/")[4].split(".")[0];
     changeImg(Number(result) + Number(1));
 });
 
