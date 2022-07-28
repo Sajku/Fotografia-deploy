@@ -5,6 +5,8 @@ const mainImg = document.querySelector("#photo");
 
 prevBtn.addEventListener("click", function() {
     var temp = document.getElementById("photo").src;
+    console.log(document.getElementById("photo").src);
+    console.log(temp);
     var result = temp.split("/")[5].split(".")[0];
     changeImg(Number(result) - Number(1));
 });
